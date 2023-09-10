@@ -73,7 +73,6 @@
   .show {
     display: block;
   }
-
   #btn-start:hover, #btn-pause:hover {
     background-color: #ccc; /* Gray color on hover */
   }
