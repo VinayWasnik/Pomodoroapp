@@ -106,3 +106,35 @@ startBtn.addEventListener("click", () => {
     }, 1000);
   }
 });
+
+// New code for fetching and displaying products
+const fetchProducts = async () => {
+  try {
+    const response = await fetch('https://dummyapi.online/api/products');
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+};
+
+const displayProducts = async () => {
+  const products = await fetchProducts();
+
+  const productsContainer = document.getElementById('products-container');
+  productsContainer.innerHTML = '';
+
+  products.forEach(product => {
+    const productElement = document.createElement('div');
+    productElement.classList.add('product');
+    productElement.innerHTML = `
+      <h2>${product.name}</h2>
+      <p>${product.description}</p>
+      <img src="${product.image}" alt="${product.name}">
+    `;
+
+    productsContainer.appendChild(productElement);
+  });
+};
+
+displayProducts();
