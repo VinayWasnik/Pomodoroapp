@@ -73,6 +73,7 @@
   .show {
     display: block;
   }
+
   #btn-start:hover, #btn-pause:hover {
     background-color: #ccc; /* Gray color on hover */
   }
@@ -83,6 +84,31 @@
     font-size: 40px;
   }
 
+
+  /* Additional CSs for Products  */
+  .product-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+
+.product {
+    background-color: #ffffff;
+    border-radius: 0.5em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 1em;
+    padding: 1em;
+    max-width: 300px;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 1em;
+}
 
 
   
